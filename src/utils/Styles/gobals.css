@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body::selection{
+    background-color: #2978b5;
+    color : #fcfcfc,
+}
