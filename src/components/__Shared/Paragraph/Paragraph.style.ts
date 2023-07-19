@@ -2,6 +2,8 @@ import styled, { css } from "styled-components";
 import { ParagraphProps } from "./Paragraph.types";
 
 export const StyledParagraph = styled.p<ParagraphProps>`
+font-family : ${props => props.theme.fontFamily};
+color : ${props => props.theme.colors.primary};
   ${(props) =>
     props.size &&
     css`
@@ -31,19 +33,19 @@ export const StyledParagraph = styled.p<ParagraphProps>`
     `}
 
     ${(props) =>
-    props.fontweight &&
+    props.fontWeight &&
     css`
-      font-weight: ${props.fontweight === "bold"
+      font-weight: ${props.fontWeight === "bold"
         ? 700
-        : props.fontweight === "semibold"
+        : props.fontWeight === "semibold"
         ? 600
-        : props.fontweight === "normal"
+        : props.fontWeight === "normal"
         ? 400
-        : props.fontweight === "thin"
+        : props.fontWeight === "thin"
         ? 100
-        : props.fontweight === "bolder"
+        : props.fontWeight === "bolder"
         ? 800
-        : props.fontweight};
+        : props.fontWeight};
     `}
 
     ${(props) =>

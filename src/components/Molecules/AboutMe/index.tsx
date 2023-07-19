@@ -21,7 +21,7 @@ const AboutMe = ({}: AboutMeProps) => {
           <Heading
             variant="h1"
             size="xlarge"
-            fontweight={"bold"}
+            fontWeight={"bold"}
             textalign="center"
             color="primary"
           >
@@ -31,7 +31,7 @@ const AboutMe = ({}: AboutMeProps) => {
             variant="h3"
             textalign="center"
             size="large"
-            fontweight={"semibold"}
+            fontWeight={"semibold"}
             color="primary"
           >
             A Web Developer

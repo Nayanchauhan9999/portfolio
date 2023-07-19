@@ -2,14 +2,13 @@ import React from "react";
 import { BoxProps } from "./Box.types";
 import { StyledBox } from "./Box.styles";
 
-
 const Box = ({
   children,
   size,
   textalign,
   color,
   margin,
-  fontweight,
+  fontWeight,
   style,
   className,
 }: BoxProps) => {
@@ -20,7 +19,7 @@ const Box = ({
       textalign={textalign}
       style={style}
       margin={margin}
-      fontweight={fontweight}
+      fontWeight={fontWeight}
       color={color}
     >
       {children}

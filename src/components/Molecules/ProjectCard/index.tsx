@@ -1,6 +1,11 @@
 import React from "react";
 import { ProjectCardProps } from "./ProjectCard.types";
-import { ProjectCardWrapper, ProjectLinksWrapper, SkillWrapper, StyledSkillList } from "./ProjectCard.styles";
+import {
+  ProjectCardWrapper,
+  ProjectLinksWrapper,
+  SkillWrapper,
+  StyledSkillList,
+} from "./ProjectCard.styles";
 import Heading from "@/components/__Shared/Heading";
 import Paragraph from "@/components/__Shared/Paragraph";
 import NavButton from "@/components/Atoms/NavButton";
@@ -19,7 +24,7 @@ const ProjectCard = ({
     <ProjectCardWrapper>
       <Heading
         textalign="center"
-        fontweight={"semibold"}
+        fontWeight={"semibold"}
         color="primary"
         variant="h2"
       >
@@ -44,7 +49,7 @@ const ProjectCard = ({
           </NavButton>
         )}
         {demoLink && (
-          <NavButton url={demoLink} >
+          <NavButton url={demoLink}>
             <FiExternalLink size={25} />
           </NavButton>
         )}

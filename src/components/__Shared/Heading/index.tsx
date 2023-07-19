@@ -8,10 +8,10 @@ const Heading = ({
   textalign,
   color,
   margin,
-  fontweight,
+  fontWeight,
   style,
   className,
-  variant
+  variant,
 }: HeadingProps) => {
   return (
     <StyledHeading
@@ -20,7 +20,7 @@ const Heading = ({
       textalign={textalign}
       style={style}
       margin={margin}
-      fontweight={fontweight}
+      fontWeight={fontWeight}
       color={color}
       as={variant}
     >

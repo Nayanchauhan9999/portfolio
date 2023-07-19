@@ -8,7 +8,7 @@ const Text = ({
   textalign,
   color,
   margin,
-  fontweight,
+  fontWeight,
   style,
   className,
 }: TextProps) => {
@@ -19,7 +19,7 @@ const Text = ({
       textalign={textalign}
       style={style}
       margin={margin}
-      fontweight={fontweight}
+      fontWeight={fontWeight}
       color={color}
     >
       {children}

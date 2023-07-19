@@ -8,7 +8,7 @@ const Paragraph = ({
   textalign,
   color,
   margin,
-  fontweight,
+  fontWeight,
   style,
   className,
 }: ParagraphProps) => {
@@ -19,7 +19,7 @@ const Paragraph = ({
       textalign={textalign}
       style={style}
       margin={margin}
-      fontweight={fontweight}
+      fontWeight={fontWeight}
       color={color}
     >
       {children}
