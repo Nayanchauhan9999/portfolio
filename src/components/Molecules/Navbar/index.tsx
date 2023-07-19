@@ -1,7 +1,6 @@
 "use client";
 import { useContext } from "react";
 import NavbarProps from "./Navbar.types";
-import Box from "@/components/__Shared/Box";
 import NavButton from "@/components/Atoms/NavButton";
 import {
   LogoWraper,

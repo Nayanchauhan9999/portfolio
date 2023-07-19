@@ -1,13 +1,12 @@
 "use client";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "../utils/Styles/gobals.css";
 import { createContext, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import darkTheme from "@/utils/Theme/dark";
 import lightTheme from "@/utils/Theme/light";
 import { layoutProps } from "@/utils/Proptypes/proptypes";
-import { Body } from "@/components/Atoms/Body/Body.styles";
+import { GlobalStyles } from "@/utils/Styles/globalStyles";
 
 const fontFam = Montserrat({ subsets: ["latin"] });
 
@@ -28,7 +27,8 @@ export default function RootLayout({ children }: layoutProps) {
       <ThemeContext.Provider value={theme}>
         <SetThemeContext.Provider value={setTheme}>
           <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-            <Body className={fontFam.className}>{children}</Body>
+            <GlobalStyles/>
+            <body className={fontFam.className}>{children}</body>
           </ThemeProvider>
         </SetThemeContext.Provider>
       </ThemeContext.Provider>

@@ -1,5 +1,6 @@
 import globals from "./gloabals";
-const lightTheme = {
+import { DefaultTheme } from "styled-components"
+const lightTheme: DefaultTheme = {
   colors: {
     primary: "#444444",
     secondary: "#2978b5",
