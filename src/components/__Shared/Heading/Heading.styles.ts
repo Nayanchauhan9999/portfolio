@@ -14,7 +14,7 @@ export const StyledHeading = styled.div<HeadingProps>`
         : props.size === "large"
         ? "2.2rem"
         : props.size === "xlarge"
-        ? "2.6  rem"
+        ? "2.6rem"
         : props.size === "xxlarge"
         ? "3.5rem"
         : props.size};

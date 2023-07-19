@@ -25,6 +25,8 @@ export const StyledParagraph = styled.p<ParagraphProps>`
         ? props.theme.colors.primary
         : props.color === "secondary"
         ? props.theme.colors.secondary
+        : props.color === "text"
+        ? props.theme.colors.text
         : props.color};
     `}
 

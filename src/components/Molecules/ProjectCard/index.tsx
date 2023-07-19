@@ -1,13 +1,12 @@
 import React from "react";
 import { ProjectCardProps } from "./ProjectCard.types";
-import { ProjectCardWrapper, StyledSkillList } from "./ProjectCard.styles";
-import Container from "@/components/__Shared/Container";
+import { ProjectCardWrapper, ProjectLinksWrapper, SkillWrapper, StyledSkillList } from "./ProjectCard.styles";
 import Heading from "@/components/__Shared/Heading";
 import Paragraph from "@/components/__Shared/Paragraph";
 import NavButton from "@/components/Atoms/NavButton";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
-import Text from "@/components/__Shared/Text";
+import Box from "@/components/__Shared/Box";
 
 const ProjectCard = ({
   title,
@@ -18,27 +17,38 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <ProjectCardWrapper>
-      <Container>
-        <Heading textalign="center">{title}</Heading>
-        <Paragraph>{description}</Paragraph>
+      <Heading
+        textalign="center"
+        fontweight={"semibold"}
+        color="primary"
+        variant="h2"
+      >
+        {title}
+      </Heading>
+      <Paragraph color="text" textalign="center">
+        {description}
+      </Paragraph>
+      <SkillWrapper>
         {skills?.map((item, index) => {
           return (
-            <StyledSkillList key={index}>
+            <StyledSkillList as={"code"} key={index}>
               {item}
             </StyledSkillList>
           );
         })}
+      </SkillWrapper>
+      <ProjectLinksWrapper>
         {gitHubLink && (
           <NavButton url={gitHubLink}>
-            <AiOutlineGithub />
+            <AiOutlineGithub size={25} />
           </NavButton>
         )}
         {demoLink && (
-          <NavButton url={demoLink}>
-            <FiExternalLink />
+          <NavButton url={demoLink} >
+            <FiExternalLink size={25} />
           </NavButton>
         )}
-      </Container>
+      </ProjectLinksWrapper>
     </ProjectCardWrapper>
   );
 };
