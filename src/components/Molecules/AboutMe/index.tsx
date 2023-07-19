@@ -46,15 +46,19 @@ const AboutMe = ({}: AboutMeProps) => {
             every element works seamlessly together.
           </CareerObjective>
           <ButtonWrapper>
-            <ButtonFill url="/" title="Resume" color="secondary" />
+            <ButtonFill
+              url="https://drive.google.com/file/d/17ya3PFxsOKPOdgTcSHSRn3uM6GxasN8S/view?usp=drive_link"
+              title="Resume"
+              color="secondary"
+            />
             <Box margin="xsmall">
-              <NavButton url="/">
-                <AiOutlineGithub />
+              <NavButton url="https://github.com/Nayanchauhan9999">
+                <AiOutlineGithub size={22} />
               </NavButton>
             </Box>
             <Box>
-              <NavButton url="/">
-                <AiFillLinkedin />
+              <NavButton url="https://www.linkedin.com/in/chauhan-nayan">
+                <AiFillLinkedin size={22} />
               </NavButton>
             </Box>
           </ButtonWrapper>

@@ -14,15 +14,17 @@ import { SocialMediaListProps } from "./SocialMediaList.types";
 const SocialMediaList = ({title}:SocialMediaListProps) => {
   return (
     <Box>
-      <Paragraph textalign="center" margin="xsmall">{title}</Paragraph>
+      <Paragraph textalign="center" margin="xsmall">
+        {title}
+      </Paragraph>
       <SocialMediaGroup>
-        <NavButton url="/">
+        <NavButton url="https://github.com/Nayanchauhan9999">
           <AiOutlineGithub size={25} />
         </NavButton>
-        <NavButton url="/">
+        <NavButton url="https://github.com/Nayanchauhan9999">
           <AiFillLinkedin size={25} color="#0077b5" />
         </NavButton>
-        <NavButton url="/">
+        <NavButton url="https://instagram.com/nayanchauhan9999?igshid=ZGUzMzM3NWJiOQ==">
           <AiOutlineInstagram size={25} color="#d62976" />
         </NavButton>
         <NavButton url="mailto: nayanchauhan9999@gmail.com">

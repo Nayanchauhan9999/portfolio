@@ -11,7 +11,7 @@ import Paragraph from "@/components/__Shared/Paragraph";
 import NavButton from "@/components/Atoms/NavButton";
 import { AiOutlineGithub } from "react-icons/ai";
 import { FiExternalLink } from "react-icons/fi";
-import Box from "@/components/__Shared/Box";
+
 
 const ProjectCard = ({
   title,

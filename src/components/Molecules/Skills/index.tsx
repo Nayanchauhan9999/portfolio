@@ -1,4 +1,3 @@
-import Box from "@/components/__Shared/Box";
 import Container from "@/components/__Shared/Container";
 import React from "react";
 import { SkillSection, SkillSectionWrapper } from "./Skills.styles";
