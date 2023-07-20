@@ -5,6 +5,9 @@ export const NavbarContainer = styled.header`
   padding: 1.7rem 0;
   box-shadow: ${(props) => props.theme.colors.boxShadow};
   position :relative;
+  @media screen and (max-width: 460px) {
+    padding: 1rem 0;
+  }
 `;
 
 export const LogoWraper = styled.div``;
@@ -28,7 +31,7 @@ export const NavbarLinksMobile = styled.div`
   @media screen and (max-width: 460px) {
     flex-direction: column;
     position:absolute;
-    top :85px;
+    top :64px;
     background-color : ${props=>props.theme.colors.background};
     left :0;
     width : 100%;
