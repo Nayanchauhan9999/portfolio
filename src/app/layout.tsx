@@ -21,15 +21,15 @@ export default function RootLayout({ children }: layoutProps) {
     }
   };
   return (
-    <html lang="en">
-      <ThemeContext.Provider value={toggleTheme}>
-        <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-          <GlobalStyles />
+    <ThemeContext.Provider value={toggleTheme}>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <GlobalStyles />
+        <html lang="en">
           <body className={fontFam.className}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
           </body>
-        </ThemeProvider>
-      </ThemeContext.Provider>
-    </html>
+        </html>
+      </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }

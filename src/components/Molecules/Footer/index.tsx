@@ -15,7 +15,7 @@ const SacramentoFont = Sacramento({
 
 const Footer = () => {
   return (
-    <FooterSection>
+    <FooterSection id="contact">
       <Container>
         <FooterWrapper>
           <SocialMediaList title="Find Me on Social Media" />

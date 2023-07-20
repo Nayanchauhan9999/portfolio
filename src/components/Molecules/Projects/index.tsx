@@ -6,7 +6,7 @@ import ProjectCard from "../ProjectCard";
 
 const Projects = () => {
   return (
-    <ProjectWrapper>
+    <ProjectWrapper id="projects">
       <Container>
         <Heading
           variant="h2"
