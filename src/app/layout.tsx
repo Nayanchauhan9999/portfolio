@@ -1,5 +1,4 @@
 "use client";
-import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
@@ -11,11 +10,6 @@ import { ThemeContext } from "@/utils/Context";
 import StyledComponentsRegistry from "@/config/registry";
 
 const fontFam = Montserrat({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Portfolio-Nayan Chauhan",
-  description: "Created By - Nayan Chauhan",
-};
 
 export default function RootLayout({ children }: layoutProps) {
   const [theme, setTheme] = useState<string>("light");
