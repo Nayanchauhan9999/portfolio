@@ -1,6 +1,7 @@
 import globals from "./gloabals";
 import {DefaultTheme} from "styled-components"
-const darkTheme : DefaultTheme = {
+const darkTheme: DefaultTheme = {
+  theme: "dark",
   colors: {
     primary: "#cdcdff",
     secondary: "#90a0d9",

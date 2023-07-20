@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import NavbarProps from "./Navbar.types";
 import NavButton from "@/components/Atoms/NavButton";
+import { useTheme } from "styled-components";
 import {
   LogoWraper,
   NavbarContainer,
@@ -10,15 +11,12 @@ import {
   StyledLogo,
 } from "./Navbar.styles";
 import { MdNightsStay, MdLightMode } from "react-icons/md";
-import { SetThemeContext, ThemeContext } from "@/app/layout";
 import Container from "@/components/__Shared/Container";
+import { ThemeContext } from "@/utils/Context";
 
 const Navbar = ({ logoTitle }: NavbarProps) => {
-  const setTheme: any = useContext(SetThemeContext);
-  const theme = useContext(ThemeContext);
-  const handleSetTheme = (): void => {
-    setTheme((prevTheme: string) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  const handleSetTheme = useContext(ThemeContext);
+  const theme = useTheme()
   return (
     <NavbarContainer>
       <Container>
@@ -37,7 +35,7 @@ const Navbar = ({ logoTitle }: NavbarProps) => {
             <NavButton url="/projects">Projects</NavButton>
             <NavButton url="/skills">skills</NavButton>
             <NavButton url="/contact">Contact</NavButton>
-            {theme === "dark" ? (
+            {theme.theme === "dark" ? (
               <MdLightMode onClick={handleSetTheme} />
             ) : (
               <MdNightsStay onClick={handleSetTheme} />

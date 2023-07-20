@@ -5,6 +5,7 @@ import Navbar from "@/components/Molecules/Navbar";
 import Projects from "@/components/Molecules/Projects";
 import Skills from "@/components/Molecules/Skills";
 export default function Home() {
+
   return (
     <>
       <main>
