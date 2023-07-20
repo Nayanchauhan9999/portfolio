@@ -14,6 +14,7 @@ const NavButton = ({
 }: NavButtonProps) => {
   return (
     <StyledNavButton
+      scroll={true}
       className={className}
       href={url}
       borderwidth={borderwidth}

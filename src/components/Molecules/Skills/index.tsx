@@ -23,7 +23,7 @@ const skillArray: string[] = [
 
 const Skills = () => {
   return (
-    <SkillSection>
+    <SkillSection id="skills">
       <Container>
         <Heading
           variant="h2"

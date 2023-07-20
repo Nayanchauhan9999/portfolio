@@ -21,7 +21,7 @@ const SocialMediaList = ({title}:SocialMediaListProps) => {
         <NavButton url="https://github.com/Nayanchauhan9999">
           <AiOutlineGithub size={25} />
         </NavButton>
-        <NavButton url="https://github.com/Nayanchauhan9999">
+        <NavButton url="https://www.linkedin.com/in/chauhan-nayan">
           <AiFillLinkedin size={25} color="#0077b5" />
         </NavButton>
         <NavButton url="https://instagram.com/nayanchauhan9999?igshid=ZGUzMzM3NWJiOQ==">
