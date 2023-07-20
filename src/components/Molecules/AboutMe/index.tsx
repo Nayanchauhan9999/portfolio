@@ -36,7 +36,7 @@ const AboutMe = ({}: AboutMeProps) => {
           >
             A Web Developer
           </Heading>
-          <CareerObjective margin="small" textalign="justify">
+          <CareerObjective margin="none" textalign="justify">
             I am a self-taught programmer who believes in lifelong learning. I
             am very passionate about being a web developer. Being a web
             developer allows me to blend my creativity with my technical skills,
