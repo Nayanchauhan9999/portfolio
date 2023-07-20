@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterSection = styled.footer`
   box-shadow: ${(props) => props.theme.colors.boxShadow};
   margin-top: 1.5rem;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.backgroundLight};
 `;
 export const PersonalBranding = styled.div``;
 export const FooterWrapper = styled.div`

@@ -10,9 +10,9 @@ export const ProjectCardWrapper = styled.div`
   flex-direction:column;
   justify-content:space-between;
   transition : all 0.3s;
+  background-color : ${props=>props.theme.colors.backgroundLight};
   &:hover {
     transform: translateY(-0.4rem);
-    box-shadow: rgba(41, 120, 181, 0.4) 0px 7px 29px 0px;
   }
 `;
 
