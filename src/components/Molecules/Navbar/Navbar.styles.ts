@@ -6,7 +6,7 @@ export const NavbarContainer = styled.header`
   box-shadow: ${(props) => props.theme.colors.boxShadow};
   position :relative;
   @media screen and (max-width: 460px) {
-    padding: 1rem 0;
+    padding: 1.4rem 0;
   }
 `;
 
