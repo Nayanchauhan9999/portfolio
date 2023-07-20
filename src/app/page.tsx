@@ -7,7 +7,6 @@ import Skills from "@/components/Molecules/Skills";
 export default function Home() {
 
   return (
-    <>
       <main>
         <Navbar logoTitle="Nayan Chauhan" />
         <AboutMe />
@@ -15,6 +14,5 @@ export default function Home() {
         <Skills />
         <Footer/>
       </main>
-    </>
   );
 }
