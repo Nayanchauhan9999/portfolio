@@ -16,5 +16,5 @@ export interface ParagraphProps {
     fontWeight?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | "bold" | "semibold" | "bolder" | "normal" | "thin";
     size?: "xsmall" | "small" | "medium" | "large" | "xlarge" | "xxlarge";
     className?: string;
-    color?: "primary" | "secondary" | "text" | string;
+    color?: "primary" | "secondary" | "text" | "error" | string;
 }

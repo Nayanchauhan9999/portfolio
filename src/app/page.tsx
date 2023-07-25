@@ -1,5 +1,6 @@
 "use client";
 import AboutMe from "@/components/Molecules/AboutMe";
+import Contact from "@/components/Molecules/Contact";
 import Footer from "@/components/Molecules/Footer";
 import Navbar from "@/components/Molecules/Navbar";
 import Projects from "@/components/Molecules/Projects";
@@ -11,7 +12,8 @@ export default function Home() {
         <Navbar logoTitle="Nayan Chauhan" />
         <AboutMe />
         <Projects />
-        <Skills />
+      <Skills />
+      <Contact/>
         <Footer/>
       </main>
   );

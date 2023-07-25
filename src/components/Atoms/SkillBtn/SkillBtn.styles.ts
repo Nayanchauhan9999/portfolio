@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import {styled} from "styled-components";
 
 export const StyledSkillBtn = styled.button`
     margin :0.3rem;

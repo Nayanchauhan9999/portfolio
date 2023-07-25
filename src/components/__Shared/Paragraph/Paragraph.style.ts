@@ -2,8 +2,7 @@ import styled, { css } from "styled-components";
 import { ParagraphProps } from "./Paragraph.types";
 
 export const StyledParagraph = styled.p<ParagraphProps>`
-font-family : ${props => props.theme.fontFamily};
-color : ${props => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.primary};
   ${(props) =>
     props.size &&
     css`
@@ -29,6 +28,8 @@ color : ${props => props.theme.colors.primary};
         ? props.theme.colors.secondary
         : props.color === "text"
         ? props.theme.colors.text
+        : props.color === "error"
+        ? props.theme.colors.error
         : props.color};
     `}
 

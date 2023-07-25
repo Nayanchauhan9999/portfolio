@@ -55,7 +55,7 @@ const Projects = () => {
           <ProjectCard
             title="Portfolio Site - Nayan Chauhan"
             description="This project is about my portfolio website. This project shows my actual ReactJs and typescript skills. In this project 90% components are extremely re-usable. And Project structure is Awesome. checkout my project structure using below link."
-            skills={["ReactJS", "JavaScript", "nextJS", "styled-components"]}
+            skills={["ReactJS", "JavaScript", "nextJS","Typescript", "styled-components"]}
             gitHubLink="https://github.com/Nayanchauhan9999/portfolio"
             demoLink="#"
           />

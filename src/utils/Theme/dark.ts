@@ -10,7 +10,9 @@ const darkTheme: DefaultTheme = {
     background: "#23283e",
     text: "#bdbddd",
     backgroundLight: "#2a2f4c",
-    boxShadowHoverColor: "rgba(144, 160, 217,0.16)"
+    boxShadowHoverColor: "rgba(144, 160, 217,0.16)",
+    lightGray: "rgba(149, 165, 166)",
+    error: "red",
   },
   ...globals,
 };

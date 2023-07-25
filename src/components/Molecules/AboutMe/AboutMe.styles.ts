@@ -6,6 +6,7 @@ export const CareerObjective = styled(Paragraph)`
   color: ${(props) => props.theme.colors.text};
   width: 50%;
   margin: auto;
+  text-align: justify;
 
   @media screen and (max-width: 1000px) {
     width: 60%;

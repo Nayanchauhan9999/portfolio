@@ -1,5 +1,5 @@
 "use client";
-import { Montserrat } from "next/font/google";
+import { Mulish } from "next/font/google";
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import darkTheme from "@/utils/Theme/dark";
@@ -9,7 +9,10 @@ import { GlobalStyles } from "@/utils/Styles/globalStyles";
 import { ThemeContext } from "@/utils/Context";
 import StyledComponentsRegistry from "@/config/registry";
 
-const fontFam = Montserrat({ subsets: ["latin"] });
+const mulish = Mulish({
+  subsets: ["latin"],
+  weight: ["500"],
+});
 
 export default function RootLayout({ children }: layoutProps) {
   const [theme, setTheme] = useState<string>("light");
@@ -25,7 +28,7 @@ export default function RootLayout({ children }: layoutProps) {
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
         <GlobalStyles />
         <html lang="en">
-          <body className={fontFam.className}>
+          <body className={mulish.className}>
             <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
           </body>
         </html>

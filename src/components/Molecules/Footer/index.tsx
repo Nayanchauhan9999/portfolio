@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterSection, FooterWrapper, PersonalBranding } from "./Footer.styles";
+import { FooterSection, FooterWrapper } from "./Footer.styles";
 import Container from "@/components/__Shared/Container";
 import Heading from "@/components/__Shared/Heading";
 import Box from "@/components/__Shared/Box";
@@ -15,18 +15,20 @@ const SacramentoFont = Sacramento({
 
 const Footer = () => {
   return (
-    <FooterSection id="contact">
+    <FooterSection>
       <Container>
         <FooterWrapper>
           <SocialMediaList title="Find Me on Social Media" />
 
-          <Box className={SacramentoFont.className}>
+          <Box>
             <Heading
               variant="h3"
               size="xlarge"
               margin="none"
               color="secondary"
+              fontWeight={"semibold"}
               textalign="center"
+              className={SacramentoFont.className}
             >
               Nayan Chauhan
             </Heading>

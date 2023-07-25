@@ -1,6 +1,8 @@
 import { styled } from "styled-components";
 
-export const ProjectWrapper = styled.section``;
+export const ProjectWrapper = styled.section`
+  scroll-margin-top : 90px;
+`;
 
 export const ProjectCardWrapper = styled.div`
   display: grid;

@@ -1,6 +1,9 @@
 import React from "react";
 import { ParagraphProps } from "./Paragraph.types";
 import { StyledParagraph } from "./Paragraph.style";
+import { StyleSheetManager } from "styled-components";
+
+const customProps = (prop: any) => !["textalign", "margin"].includes(prop);
 
 const Paragraph = ({
   children,
@@ -13,6 +16,7 @@ const Paragraph = ({
   className,
 }: ParagraphProps) => {
   return (
+    <StyleSheetManager shouldForwardProp={customProps}>
     <StyledParagraph
       className={className}
       size={size}
@@ -24,6 +28,7 @@ const Paragraph = ({
     >
       {children}
     </StyledParagraph>
+    </StyleSheetManager>
   );
 };
 

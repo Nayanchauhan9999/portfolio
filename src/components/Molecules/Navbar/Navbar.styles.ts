@@ -4,10 +4,13 @@ import { styled } from "styled-components";
 export const NavbarContainer = styled.header`
   padding: 1.7rem 0;
   box-shadow: ${(props) => props.theme.colors.boxShadow};
-  position :relative;
+  position :sticky;
   @media screen and (max-width: 460px) {
     padding: 1.4rem 0;
   }
+  top: 0;
+  background-color : ${props => props.theme.colors.backgroundLight};
+  z-index : 2;
 `;
 
 export const LogoWraper = styled.div``;
@@ -32,7 +35,7 @@ export const NavbarLinksMobile = styled.div`
     flex-direction: column;
     position:absolute;
     top :77px;
-    background-color : ${props=>props.theme.colors.background};
+    background-color : ${props => props.theme.colors.background};
     left :0;
     width : 100%;
     box-shadow :${props => props.theme.colors.boxShadow};

@@ -49,10 +49,16 @@ const Navbar = ({ logoTitle }: NavbarProps) => {
               <NavButton url="#contact">Contact</NavButton>
             </NavbarLinks>
             {openNav && (
-              <NavbarLinksMobile>
-                <NavButton url="#projects">Projects</NavButton>
-                <NavButton url="#skills">skills</NavButton>
-                <NavButton url="#contact">Contact</NavButton>
+              <NavbarLinksMobile onClick={() => setOpenNav(false)}>
+                <NavButton url="#projects" borderwidth="2px">
+                  Projects
+                </NavButton>
+                <NavButton url="#skills" borderwidth="2px">
+                  skills
+                </NavButton>
+                <NavButton url="#contact" borderwidth="2px">
+                  Contact
+                </NavButton>
               </NavbarLinksMobile>
             )}
 

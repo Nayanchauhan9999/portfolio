@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const SkillSection = styled.section`
-
+scroll-margin-top : 90px;
 `
 
 export const SkillSectionWrapper = styled.div`
