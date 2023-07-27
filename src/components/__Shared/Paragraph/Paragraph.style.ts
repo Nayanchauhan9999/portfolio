@@ -2,7 +2,9 @@ import styled, { css } from "styled-components";
 import { ParagraphProps } from "./Paragraph.types";
 
 export const StyledParagraph = styled.p<ParagraphProps>`
+  //common styles
   color: ${(props) => props.theme.colors.primary};
+
   ${(props) =>
     props.size &&
     css`

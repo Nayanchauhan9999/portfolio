@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const StyledContactForm = styled.form``;
+export const StyledContactForm = styled.form`
+  background-color: ${(props) => props.theme.colors.backgroundLight};
+  box-shadow: ${(props) => props.theme.colors.boxShadow};
+  padding : 1rem;
+`;
 
 export const ContactFormWrapper = styled.div``;
 export const InputFieldWrapper = styled.div`

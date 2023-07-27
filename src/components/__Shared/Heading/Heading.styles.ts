@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { HeadingProps } from "./Heading.types";
 
 export const StyledHeading = styled.div<HeadingProps>`
+letter-spacing : 1.1px;
   ${(props) =>
     props.size &&
     css`

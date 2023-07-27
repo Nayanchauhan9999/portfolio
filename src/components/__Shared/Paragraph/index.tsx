@@ -17,17 +17,17 @@ const Paragraph = ({
 }: ParagraphProps) => {
   return (
     <StyleSheetManager shouldForwardProp={customProps}>
-    <StyledParagraph
-      className={className}
-      size={size}
-      textalign={textalign}
-      style={style}
-      margin={margin}
-      fontWeight={fontWeight}
-      color={color}
-    >
-      {children}
-    </StyledParagraph>
+      <StyledParagraph
+        className={className}
+        size={size}
+        textalign={textalign}
+        style={style}
+        margin={margin}
+        fontWeight={fontWeight}
+        color={color}
+      >
+        {children}
+      </StyledParagraph>
     </StyleSheetManager>
   );
 };

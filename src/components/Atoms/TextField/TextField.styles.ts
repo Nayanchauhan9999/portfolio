@@ -19,7 +19,7 @@ export const StyledTextField = styled.input<{
   width: 100%;
   max-width: 100%;
   color: ${(props) => props.theme.colors.primary};
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: inherit;
   letter-spacing: 1.1px;
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
@@ -28,7 +28,7 @@ export const StyledTextField = styled.input<{
     -webkit-background-clip: text;
     -webkit-text-fill-color: ${(props) => props.theme.colors.primary};
     transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px ${(props) => props.theme.colors.background};
+    box-shadow: inset 0 0 20px 20px inherit;
   }
 
   &:-webkit-autofill:focus {

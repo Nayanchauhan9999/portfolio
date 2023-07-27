@@ -12,7 +12,11 @@ const darkTheme: DefaultTheme = {
     backgroundLight: "#2a2f4c",
     boxShadowHoverColor: "rgba(144, 160, 217,0.16)",
     lightGray: "rgba(149, 165, 166)",
-    error: "red",
+    error: "rgb(220, 53, 69)",
+    success: "rgb(25, 135, 84)",
+    warning: "rgb(255, 193, 7)",
+    dark: "rgb(33, 37, 41)",
+    blue: "#0070f3",
   },
   ...globals,
 };

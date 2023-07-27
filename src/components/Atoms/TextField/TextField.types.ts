@@ -11,4 +11,5 @@ export interface TextFieldProps {
   as?: string;
   id?: string;
   errormsg?: string | undefined;
+  showReqSymbol?: boolean;
 }

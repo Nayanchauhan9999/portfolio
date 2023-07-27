@@ -25,6 +25,8 @@ export const StyledText = styled.span<TextProps>`
         ? props.theme.colors.primary
         : props.color === "secondary"
         ? props.theme.colors.secondary
+        : props.color === "error"
+        ? props.theme.colors.error
         : props.color};
     `}
 

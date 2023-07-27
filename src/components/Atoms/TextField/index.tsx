@@ -4,6 +4,7 @@ import { Controller } from "react-hook-form";
 import { TextFieldProps } from "./TextField.types";
 import Box from "@/components/__Shared/Box";
 import Paragraph from "@/components/__Shared/Paragraph";
+import Text from "@/components/__Shared/Text";
 
 const TextField = ({
   name,
@@ -16,6 +17,7 @@ const TextField = ({
   as,
   id,
   errormsg,
+  showReqSymbol
 }: TextFieldProps) => {
   return (
     <Controller
@@ -25,7 +27,11 @@ const TextField = ({
       render={({ field: { onBlur, onChange, ref, value } }) => {
         return (
           <Box style={{ marginTop: "0.3rem", marginBottom: "0.3rem" }}>
-            {label && <StyledLabel htmlFor={id}>{label}</StyledLabel>}
+            {label && (
+              <StyledLabel htmlFor={id}>
+                {label} {showReqSymbol && <Text color="error" size="small">*</Text>}
+              </StyledLabel>
+            )}
             <StyledTextField
               onChange={onChange}
               errormsg={errormsg}
@@ -40,7 +46,7 @@ const TextField = ({
               id={id}
             />
             {errormsg && (
-              <Paragraph color="error" margin="none">
+              <Paragraph color="error" margin="none" size="small">
                 &#9888; {errormsg}
               </Paragraph>
             )}

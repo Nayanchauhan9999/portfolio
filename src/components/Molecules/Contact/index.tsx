@@ -14,14 +14,19 @@ const Contact = () => {
           variant="h2"
           textalign="center"
           color="primary"
-          margin="large"
           size="xlarge"
+          margin="medium"
+          // style={{ margin: "1rem 0" }}
         >
           CONTACT ME
         </Heading>
-        <Paragraph textalign="center">
+        {/* <Paragraph
+          textalign="center"
+          margin="none"
+          style={{ marginBottom: "2rem" }}
+        >
           Any questions? Just write me a message!
-        </Paragraph>
+        </Paragraph> */}
         <ContactWrapper>
           <ContactCard
             cardTitle="Contact Information"
