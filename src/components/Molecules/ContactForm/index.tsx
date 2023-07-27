@@ -28,10 +28,21 @@ const ContactForm = () => {
     mode: "all",
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log(data);
+  const onSubmit = async (data: ContactFormValues) => {
     setUserData(data);
     reset();
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.log(error)
+    }
+
     setOpen(true);
   };
 
