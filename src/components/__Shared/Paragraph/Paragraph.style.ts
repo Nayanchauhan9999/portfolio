@@ -35,11 +35,6 @@ export const StyledParagraph = styled.p<ParagraphProps>`
         ? props.theme.colors.blue
         : props.color};
     `}
-
-    &:hover{
-      color:inherit;
-    }
-
     ${(props) =>
     props.fontWeight &&
     css`

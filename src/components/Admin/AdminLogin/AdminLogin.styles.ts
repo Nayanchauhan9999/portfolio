@@ -6,6 +6,7 @@ export const StyledAdminLogin = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction:column;
   background-color: ${(props) => props.theme.colors.background};
 `;
 

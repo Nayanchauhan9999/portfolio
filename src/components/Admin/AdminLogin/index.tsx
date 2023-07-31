@@ -9,6 +9,7 @@ import { Poppins } from "next/font/google";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import Text from "@/components/__Shared/Text";
 import Link from "@/components/__Shared/Link";
+import Paragraph from "@/components/__Shared/Paragraph";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,6 +31,14 @@ const AdminLogin = () => {
           <Text>Home</Text>
         </BackToHomepageButton>
       </Link>
+      <Paragraph textalign="justify">
+        Admin dashboard is currently under development, Check after some time.
+        you can also checkout current status of admin dashbord from
+        <Link href={"/admin/portal"}>
+          {" "}
+          <Text color="blue">here</Text>.
+        </Link>
+      </Paragraph>
     </StyledAdminLogin>
   );
 };
