@@ -16,7 +16,7 @@ export const StyledButton = styled.button<ButtonProps>`
       : props.bgcolor};
   opacity: 0.9;
   border: none;
-  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), -3px -3px 8px rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   cursor: pointer;
   color: #ffffff;

@@ -6,6 +6,7 @@ import Navbar from "@/components/Molecules/Navbar";
 import Projects from "@/components/Molecules/Projects";
 import Skills from "@/components/Molecules/Skills";
 import { StyleSheetManager } from "styled-components";
+
 export default function Home() {
   const customProps = (props: string) =>
     !["bgcolor", "wordwrap"].includes(props);

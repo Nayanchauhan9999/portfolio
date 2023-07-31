@@ -30,5 +30,5 @@ export interface ParagraphProps {
     | "thin";
   size?: "xsmall" | "small" | "medium" | "large" | "xlarge" | "xxlarge";
   className?: string;
-  color?: "priwordwrap?: boolean | 1 | 0;mary" | "secondary" | "text" | "error" | string;
+  color?: "primary" | "secondary" | "text" | "error"|"blue" | string;
 }

@@ -4,7 +4,6 @@ import { ParagraphProps } from "./Paragraph.types";
 export const StyledParagraph = styled.p<ParagraphProps>`
   //common styles
   color: ${(props) => props.theme.colors.primary};
-
   ${(props) =>
     props.size &&
     css`
@@ -32,8 +31,14 @@ export const StyledParagraph = styled.p<ParagraphProps>`
         ? props.theme.colors.text
         : props.color === "error"
         ? props.theme.colors.error
+        : props.color === "blue"
+        ? props.theme.colors.blue
         : props.color};
     `}
+
+    &:hover{
+      color:inherit;
+    }
 
     ${(props) =>
     props.fontWeight &&

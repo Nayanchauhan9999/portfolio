@@ -8,7 +8,6 @@ import { layoutProps } from "@/utils/Proptypes/proptypes";
 import { GlobalStyles } from "@/utils/Styles/globalStyles";
 import { ThemeContext } from "@/utils/Context";
 import StyledComponentsRegistry from "@/config/registry";
-import Head from "next/head";
 
 const mulish = Mulish({
   subsets: ["latin"],

@@ -10,14 +10,18 @@ const TextField = ({
   name,
   control,
   defaultValue = "",
-  inputsize = "medium",
   placeholder,
   label,
   type = "text",
   as,
   id,
+  radius,
   errormsg,
-  showReqSymbol
+  showReqSymbol,
+  bordersides = "bottom",
+  pad,
+  margin,
+  borderwidth="2px",
 }: TextFieldProps) => {
   return (
     <Controller
@@ -29,7 +33,12 @@ const TextField = ({
           <Box style={{ marginTop: "0.3rem", marginBottom: "0.3rem" }}>
             {label && (
               <StyledLabel htmlFor={id}>
-                {label} {showReqSymbol && <Text color="error" size="small">*</Text>}
+                {label}{" "}
+                {showReqSymbol && (
+                  <Text color="error" size="small">
+                    *
+                  </Text>
+                )}
               </StyledLabel>
             )}
             <StyledTextField
@@ -38,12 +47,16 @@ const TextField = ({
               onBlur={onBlur}
               value={value}
               ref={ref}
-              inputsize={inputsize}
               placeholder={placeholder}
               type={type}
               autoComplete="on"
               as={as}
               id={id}
+              radius={radius}
+              bordersides={bordersides}
+              pad={pad}
+              margin={margin}
+              borderwidth={borderwidth}
             />
             {errormsg && (
               <Paragraph color="error" margin="none" size="small">

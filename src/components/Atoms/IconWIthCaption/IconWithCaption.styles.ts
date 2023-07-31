@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-export const StyledIconWithCaption = styled.div`
-    display : flex;
-    align-items : center;
-     gap : .6rem;
-`
+export const StyledIconWithCaption = styled.div<{ gap?: string }>`
+  display: flex;
+  align-items: center;
+  gap: ${(props) => props.gap};
+  font-family: inherit;
+`;
