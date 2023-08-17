@@ -12,7 +12,7 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
 import { FaEye, FaEdit } from "react-icons/fa";
-import { AiFillDelete } from "react-icons/ai"
+import { AiFillDelete } from "react-icons/ai";
 
 const ContactInquiries = () => {
   const [contactData, setContactData] = useState<ContactTypes[]>([]);
@@ -27,7 +27,6 @@ const ContactInquiries = () => {
     setContactData(contact);
     setLoading(false);
   };
-
 
   const columns: GridColDef[] = [
     {
