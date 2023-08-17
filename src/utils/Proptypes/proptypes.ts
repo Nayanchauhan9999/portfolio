@@ -22,3 +22,13 @@ export type margin = {
   horizontal?: string | undefined;
   all?: string | undefined;
 };
+
+export type ContactTypes = {
+  company: string;
+  email: string;
+  fullName: string;
+  id: string;
+  message: string;
+  mobile: string;
+  submitedAt?: string;
+};

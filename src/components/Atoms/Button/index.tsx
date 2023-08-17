@@ -11,6 +11,8 @@ const Button = ({
   bgcolor = "blue",
   align = "center",
   onClick,
+  pad,
+  margin
 }: ButtonProps) => {
   return (
     <StyleSheetManager shouldForwardProp={customProps}>
@@ -21,6 +23,8 @@ const Button = ({
         bgcolor={bgcolor}
         align={align}
         onClick={onClick}
+        pad={pad}
+        margin={margin}
       >
         {children}
       </StyledButton>

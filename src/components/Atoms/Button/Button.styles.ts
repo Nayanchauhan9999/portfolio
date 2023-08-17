@@ -20,9 +20,7 @@ export const StyledButton = styled.button<ButtonProps>`
   border-radius: 7px;
   cursor: pointer;
   color: #ffffff;
-  line-height: 2.5rem;
-  height: 2.5rem;
-  padding: 0 2rem;
+  padding: 0.6rem 1rem;
   display: block;
   width: ${(props) => (props.width === "full" ? "100%" : props.width)};
   font-family: inherit;
@@ -33,6 +31,73 @@ export const StyledButton = styled.button<ButtonProps>`
   &:active {
     opacity: 1;
   }
+
+  ${(props) =>
+    props.pad?.all !== undefined
+      ? css`
+          padding: ${props.pad.all};
+        `
+      : props.pad?.vertical !== undefined
+      ? css`
+          padding-top: ${props.pad.vertical};
+          padding-bottom: ${props.pad.vertical};
+        `
+      : props.pad?.horizontal !== undefined
+      ? css`
+          padding-left: ${props.pad.horizontal};
+          padding-right: ${props.pad.horizontal};
+        `
+      : props.pad?.top !== undefined
+      ? css`
+          padding-top: ${props.pad.top};
+        `
+      : props.pad?.bottom !== undefined
+      ? css`
+          padding-bottom: ${props.pad.bottom};
+        `
+      : props.pad?.start !== undefined
+      ? css`
+          padding-left: ${props.pad.start};
+        `
+      : props.pad?.end !== undefined
+      ? css`
+          padding-right: ${props.pad.end};
+        `
+      : null}
+
+  ${(props) =>
+    props.margin?.all !== undefined
+      ? css`
+          margin: ${props.margin.all};
+        `
+      : props.margin?.vertical !== undefined
+      ? css`
+          margin-top: ${props.margin.vertical};
+          margin-bottom: ${props.margin.vertical};
+        `
+      : props.margin?.horizontal !== undefined
+      ? css`
+          margin-left: ${props.margin.horizontal};
+          margin-right: ${props.margin.horizontal};
+        `
+      : props.margin?.top !== undefined
+      ? css`
+          margin-top: ${props.margin.top};
+        `
+      : props.margin?.bottom !== undefined
+      ? css`
+          margin-bottom: ${props.margin.bottom};
+        `
+      : props.margin?.start !== undefined
+      ? css`
+          margin-left: ${props.margin.start};
+        `
+      : props.margin?.end !== undefined
+      ? css`
+          margin-right: ${props.margin.end};
+        `
+      : null}
+
 
   ${(props) =>
     props.align === "center"

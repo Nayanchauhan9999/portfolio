@@ -16,6 +16,7 @@ const lightTheme: DefaultTheme = {
     warning: "rgb(255, 193, 7)",
     dark: "rgb(33, 37, 41)",
     blue: "#0070f3",
+    light: "#dddddd"
   },
   ...globals,
 };

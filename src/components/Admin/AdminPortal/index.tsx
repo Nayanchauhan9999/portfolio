@@ -24,8 +24,8 @@ const SidebarLinks: SidebarLinksprops = [
   },
   {
     id: 3,
-    name: "Contact Enquiries",
-    link: "/admin/portal/contact-enquiries",
+    name: "Contact inquiries",
+    link: "/admin/portal/contact-inquiries",
     icon: <BiSupport size={20} />,
   },
   {

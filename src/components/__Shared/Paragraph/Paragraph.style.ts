@@ -3,6 +3,8 @@ import { ParagraphProps } from "./Paragraph.types";
 
 export const StyledParagraph = styled.p<ParagraphProps>`
   //common styles
+  letter-spacing:1.05px;
+  line-height:1.5rem;
   color: ${(props) => props.theme.colors.primary};
   ${(props) =>
     props.size &&

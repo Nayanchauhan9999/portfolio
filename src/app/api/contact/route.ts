@@ -6,7 +6,6 @@ export async function POST(req: NextRequest, res: NextResponse) {
   try {
     await conntectDB();
     const body = await req.json();
-    console.log(body);
     await contactModel.create(body);
     return NextResponse.json(body, {
       status: 200,

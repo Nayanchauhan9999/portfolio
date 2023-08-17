@@ -34,7 +34,7 @@ export const NavbarLinksMobile = styled.div`
   @media screen and (max-width: 460px) {
     flex-direction: column;
     position:absolute;
-    top :77px;
+    top :76px;
     background-color : ${props => props.theme.colors.background};
     left :0;
     width : 100%;
