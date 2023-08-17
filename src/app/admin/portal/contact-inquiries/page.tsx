@@ -91,21 +91,26 @@ const ContactInquiries = () => {
     },
   ];
   return (
-    <Box style={{ width: "100%", boxSizing: "border-box", padding: "1.5rem" }}>
-      <Box style={{ overflowX: "auto" }}>
-        <PanelWrapper style={{ margin: "1rem 0" }}>
-          <Heading variant="h1" textalign={"center"}>
-            Contact Inquiries
-          </Heading>
-          <Paragraph textalign="center">
-            Create, Update, Delete and view message of contacts
-          </Paragraph>
-        </PanelWrapper>
-      </Box>
+    <Box>
+      <PanelWrapper style={{ margin: "1rem 0", boxSizing: "border-box" }}>
+        <Heading variant="h1" textalign={"center"}>
+          Contact Inquiries
+        </Heading>
+        <Paragraph textalign="center">
+          Create, Update, Delete and view message of contacts
+        </Paragraph>
+      </PanelWrapper>
       <DataGrid
         rows={contactData}
         columns={columns}
-        sx={{ backgroundColor: "white", height: "auto" }}
+        sx={{
+          backgroundColor: "white",
+          minHeight: "25vh",
+          overflowX: "hidden",
+          boxSizing: "border-box",
+          padding: "1.5rem",
+          borderRadius: "0.375rem",
+        }}
         loading={loading}
       />
     </Box>

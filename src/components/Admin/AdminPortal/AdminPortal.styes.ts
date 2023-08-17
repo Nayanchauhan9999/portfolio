@@ -2,11 +2,15 @@
 import styled from "styled-components";
 
 export const AdminPortalWrapper = styled.div`
-  min-width: 14rem;
-  min-height: 100vh;
+  width:20vw;
   background-color: white;
-  box-sizing: border-box;
   border-right: 1px solid #dddddd;
+  height: 100vh;
+  box-sizing: border-box;
+  position:fixed;
+  left:0;
+  top: 0;
+  overflow-y:auto;
 `;
 export const AdminPortalSidebar = styled.div`
   display: flex;
