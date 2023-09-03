@@ -11,6 +11,8 @@ export const AdminPortalWrapper = styled.div`
   left:0;
   top: 0;
   overflow-y:auto;
+  min-width:15rem;
+  padding:1rem;
 `;
 export const AdminPortalSidebar = styled.div`
   display: flex;
@@ -19,6 +21,7 @@ export const AdminPortalSidebar = styled.div`
   a {
     padding: 0.6rem;
     transition: all 0.3s;
+    border-radius:0.375rem;
     &.active {
       svg,
       p {
@@ -27,6 +30,9 @@ export const AdminPortalSidebar = styled.div`
     }
     &:hover:not(.active) {
       font-weight: bold;
+    }
+    &:hover{
+      background-color: #dddddd80;
     }
   }
 `;
