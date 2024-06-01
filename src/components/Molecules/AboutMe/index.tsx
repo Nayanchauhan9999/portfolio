@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { AboutMeProps } from "./AboutMe.types";
 import {
@@ -34,16 +35,16 @@ const AboutMe = ({}: AboutMeProps) => {
             fontWeight={"semibold"}
             color="primary"
           >
-            A Web Developer
+            App Developer
           </Heading>
-          <CareerObjective>
-            I am a self-taught programmer who believes in lifelong learning. I
-            am very passionate about being a web developer. Being a web
-            developer allows me to blend my creativity with my technical skills,
-            enabling me to bring ideas to life in the digital realm. I love the
-            process of turning a concept or design into a fully functional
-            website, carefully crafting the user experience and ensuring that
-            every element works seamlessly together.
+          <CareerObjective>1
+            Hello! I'm Nayan, a passionate React Native developer with 1
+            years of experience in building high-quality mobile applications. My
+            journey in mobile development began with a desire to create
+            seamless, intuitive, and visually appealing apps that provide
+            exceptional user experiences. With a strong foundation in JavaScript
+            and expertise in React Native, ReactJS, Next.js, and Node.js, I have
+            successfully delivered numerous projects from concept to deployment.
           </CareerObjective>
           <ButtonWrapper>
             <ButtonFill
