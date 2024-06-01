@@ -6,7 +6,6 @@ import PanelWrapper from "@/components/Atoms/PanelWrapper";
 import Paragraph from "@/components/__Shared/Paragraph";
 import Heading from "@/components/__Shared/Heading";
 import { GridColDef } from "@mui/x-data-grid";
-import { ApiClient } from "@/utils/http";
 import { ContactTypes } from "@/utils/Proptypes/proptypes";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -15,18 +14,18 @@ import { FaEye, FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 
 const ContactInquiries = () => {
-  const [contactData, setContactData] = useState<ContactTypes[]>([]);
+  // const [contactData, setContactData] = useState<ContactTypes[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-  useEffect(() => {
-    getContactData();
-  }, []);
+  // useEffect(() => {
+  //   getContactData();
+  // }, []);
 
-  const getContactData = async () => {
-    setLoading(true);
-    const contact: ContactTypes[] = await new ApiClient().get("contact");
-    setContactData(contact);
-    setLoading(false);
-  };
+  // const getContactData = async () => {
+  //   setLoading(true);
+  //   const contact: ContactTypes[] = await new ApiClient().get("contact");
+  //   // setContactData(contact);
+  //   setLoading(false);
+  // };
 
   const columns: GridColDef[] = [
     {
@@ -101,7 +100,8 @@ const ContactInquiries = () => {
         </Paragraph>
       </PanelWrapper>
       <DataGrid
-        rows={contactData}
+        // rows={contactData}
+        rows={[]}
         columns={columns}
         sx={{
           backgroundColor: "white",

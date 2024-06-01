@@ -12,7 +12,6 @@ import SuccessAlertModal from "../Models/SuccessAlertModal";
 import Paragraph from "@/components/__Shared/Paragraph";
 import Link from "@/components/__Shared/Link";
 import Text from "@/components/__Shared/Text";
-import axios from "axios";
 
 const ContactForm = () => {
   const [open, setOpen] = useState(false);
@@ -35,14 +34,13 @@ const ContactForm = () => {
     reset();
     try {
       setIsLoading(true);
-      // await fetch("/api/contact", {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(data),
-      // });
-      await axios.post("/api/contact",data);
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
