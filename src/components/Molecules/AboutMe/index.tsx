@@ -47,7 +47,7 @@ const AboutMe = ({}: AboutMeProps) => {
           </CareerObjective>
           <ButtonWrapper>
             <ButtonFill
-              url="https://drive.google.com/file/d/1sCtSRv_uhB4sHkWvu9-dm7UlZwf2fokn/view?usp=sharing"
+              url="https://drive.google.com/file/d/1DQdelemeX-gy-wK7P5mlPhX3T7qnXL-n/view?usp=drive_link"
               title="Resume"
               color="secondary"
             />
