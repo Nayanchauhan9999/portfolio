@@ -2,7 +2,6 @@ import React from "react";
 import { ContactWrapper, StyledContact } from "./Contact.styles";
 import Container from "@/components/__Shared/Container";
 import Heading from "@/components/__Shared/Heading";
-import Paragraph from "@/components/__Shared/Paragraph";
 import ContactCard from "../ContactCard";
 import ContactForm from "../ContactForm";
 

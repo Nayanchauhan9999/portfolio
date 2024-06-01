@@ -37,9 +37,9 @@ const AboutMe = ({}: AboutMeProps) => {
           >
             App Developer
           </Heading>
-          <CareerObjective>1
-            Hello! I'm Nayan, a passionate React Native developer with 1
-            years of experience in building high-quality mobile applications. My
+          <CareerObjective>
+            Hello! I'm Nayan, a passionate React Native developer with 1 years
+            of experience in building high-quality mobile applications. My
             journey in mobile development began with a desire to create
             seamless, intuitive, and visually appealing apps that provide
             exceptional user experiences. With a strong foundation in JavaScript

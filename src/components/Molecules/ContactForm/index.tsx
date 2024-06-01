@@ -16,6 +16,7 @@ import Text from "@/components/__Shared/Text";
 const ContactForm = () => {
   const [open, setOpen] = useState(false);
   const [userData, setUserData] = useState<ContactFormValues | undefined>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   //using useForm hook
   const {
     control,
@@ -32,6 +33,7 @@ const ContactForm = () => {
     setUserData(data);
     reset();
     try {
+      setIsLoading(true);
       await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -39,8 +41,10 @@ const ContactForm = () => {
         },
         body: JSON.stringify(data),
       });
+      setIsLoading(false);
     } catch (error) {
-      console.log(error)
+      setIsLoading(false);
+      console.log(error);
     }
 
     setOpen(true);
@@ -56,7 +60,7 @@ const ContactForm = () => {
             <Paragraph>
               Thank you for contacting me{" "}
               {userData && <Text color="secondary">{userData?.fullName}</Text>}.
-              Congratulations, form has been submited Successfully.
+              form has been submited Successfully.
             </Paragraph>
             <Paragraph>
               I will try to contact you within 2 bussiness days. You can also
@@ -65,84 +69,98 @@ const ContactForm = () => {
                 <Text color="secondary">nayanchauhan9999@gmail.com.</Text>
               </Link>
             </Paragraph>
-            <Paragraph>Meanwhile stay safe and take care.</Paragraph>
           </>
         }
         onClose={() => setOpen(false)}
       />
-      <Heading
-        variant="h3"
-        color="secondary"
-        margin="none"
-        textalign="center"
-        style={{ marginBottom: "1rem" }}
-      >
-        Contact Form
-      </Heading>
-      <InputFieldWrapper>
-        <TextField
-          name="fullName"
-          placeholder="Full Name"
-          control={control}
-          label="Full Name"
-          id="fullname"
-          errormsg={errors.fullName?.message}
-          showReqSymbol
-        />
+      {isLoading ? (
+        <Box>
+          <Paragraph
+            textalign="center"
+            color="secondary"
+            fontWeight={"semibold"}
+            size="medium"
+          >
+            Submiting...
+          </Paragraph>
+        </Box>
+      ) : (
+        <Box>
+          <Heading
+            variant="h3"
+            color="secondary"
+            margin="none"
+            textalign="center"
+            style={{ marginBottom: "1rem" }}
+          >
+            Contact Form
+          </Heading>
+          <InputFieldWrapper>
+            <TextField
+              name="fullName"
+              placeholder="Full Name"
+              control={control}
+              label="Full Name"
+              id="fullname"
+              errormsg={errors.fullName?.message}
+              showReqSymbol
+            />
 
-        <TextField
-          name="company"
-          placeholder="Company"
-          control={control}
-          label="Company"
-          type="text"
-          id="company"
-          errormsg={errors.company?.message}
-          showReqSymbol
-        />
-      </InputFieldWrapper>
-      <InputFieldWrapper>
-        <TextField
-          name="email"
-          placeholder="Email"
-          control={control}
-          label="Email"
-          type="email"
-          id="email"
-          errormsg={errors.email?.message}
-          showReqSymbol
-        />
-        <TextField
-          name="mobile"
-          placeholder="Mobile No"
-          control={control}
-          label="Mobile No"
-          type="tel"
-          id="mobile"
-          errormsg={errors.mobile?.message?.toString()}
-          showReqSymbol
-        />
-      </InputFieldWrapper>
-      <TextField
-        name="message"
-        placeholder="write me message..."
-        control={control}
-        label="Message"
-        type="text"
-        as="textarea"
-        id="message"
-        errormsg={errors.message?.message}
-        showReqSymbol
-      />
-      <Box style={{ marginTop: "1rem", marginBottom: "1rem" }}>
-        <ButtonFillNormal
-          title="Submit"
-          color="secondary"
-          width="full"
-          fontWeight="500"
-          onClick={handleSubmit(onSubmit)}
-        />
-      </Box>
+            <TextField
+              name="company"
+              placeholder="Company"
+              control={control}
+              label="Company"
+              type="text"
+              id="company"
+              errormsg={errors.company?.message}
+              showReqSymbol
+            />
+          </InputFieldWrapper>
+          <InputFieldWrapper>
+            <TextField
+              name="email"
+              placeholder="Email"
+              control={control}
+              label="Email"
+              type="email"
+              id="email"
+              errormsg={errors.email?.message}
+              showReqSymbol
+            />
+            <TextField
+              name="mobile"
+              placeholder="Mobile No"
+              control={control}
+              label="Mobile No"
+              type="tel"
+              id="mobile"
+              errormsg={errors.mobile?.message?.toString()}
+              showReqSymbol
+            />
+          </InputFieldWrapper>
+          <TextField
+            name="message"
+            placeholder="write me message..."
+            control={control}
+            label="Message"
+            type="text"
+            as="textarea"
+            id="message"
+            errormsg={errors.message?.message}
+            showReqSymbol
+          />
+          <Box style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+            <ButtonFillNormal
+              title="Submit"
+              color="secondary"
+              width="full"
+              fontWeight="500"
+              onClick={handleSubmit(onSubmit)}
+            />
+          </Box>
+        </Box>
+      )}
     </StyledContactForm>
   );
 };

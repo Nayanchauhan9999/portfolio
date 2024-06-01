@@ -47,7 +47,7 @@ const Navbar = ({ logoTitle }: NavbarProps) => {
               <NavButton url="#projects">Projects</NavButton>
               <NavButton url="#skills">skills</NavButton>
               <NavButton url="#contact">Contact</NavButton>
-              <NavButton url="/admin/login">Admin</NavButton>
+              {/* <NavButton url="/admin/login">Admin</NavButton> */}
             </NavbarLinks>
             {openNav && (
               <NavbarLinksMobile onClick={() => setOpenNav(false)}>

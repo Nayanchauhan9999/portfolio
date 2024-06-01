@@ -19,6 +19,10 @@ const skillArray: string[] = [
   "Yup",
   "Git/Github",
   "Styled-components",
+  "React Native",
+  "React Query",
+  "NodeJs",
+  "MongoDB"
 ];
 
 const Skills = () => {
