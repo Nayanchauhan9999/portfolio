@@ -15,8 +15,3 @@ export const ContactSchema = yup.object({
     .matches(phoneRegExp, "Mobile number is not valid"),
   message: yup.string().required("Please enter your message"),
 });
-
-export const AdminLoginFormSchema = yup.object().shape({
-  username: yup.string().required("Please enter username"),
-  password: yup.string().required("Please enter password"),
-});
