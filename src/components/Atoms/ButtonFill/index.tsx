@@ -11,6 +11,7 @@ const ButtonFill = ({
   fontWeight = "500",
   color,
   className,
+  target,
 }: ButtonFillProps) => {
   return (
     <StyledButtonFill
@@ -20,6 +21,7 @@ const ButtonFill = ({
       fontSize={fontSize}
       fontWeight={fontWeight}
       color={color}
+      target={target}
     >
       {title}
     </StyledButtonFill>

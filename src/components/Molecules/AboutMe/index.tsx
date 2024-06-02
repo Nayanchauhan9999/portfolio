@@ -51,6 +51,7 @@ const AboutMe = ({}: AboutMeProps) => {
               url="https://drive.google.com/file/d/1DQdelemeX-gy-wK7P5mlPhX3T7qnXL-n/view?usp=drive_link"
               title="Resume"
               color="secondary"
+              target="_blank"
             />
             <Box margin="xsmall">
               <NavButton url="https://github.com/Nayanchauhan9999">
